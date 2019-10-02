@@ -188,6 +188,7 @@ WHERE o.customer_id IS NULL
 ### Keep track of the code you write and paste at the end of this document
 
 - use pgAdmin to create a database, naming it `budget`.
+
 - add an `accounts` table with the following _schema_:
 
   - `id`, numeric value with no decimal places that should autoincrement.
@@ -198,3 +199,12 @@ WHERE o.customer_id IS NULL
   - the `id` should be the primary key for the table.
   - account `name` should be unique.
   - account `budget` is required.
+
+
+CREATE DATABASE budget
+
+CREATE TABLE accounts (
+    id serial PRIMARY KEY,
+	name varchar UNIQUE,
+	budget integer NOT NULL
+) 
