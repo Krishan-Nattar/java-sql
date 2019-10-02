@@ -121,6 +121,11 @@ ORDER BY count desc
 ### list orders grouped by customer's city showing number of orders per city. Returns 69 Records with _Aachen_ showing 6 orders and _Albuquerque_ showing 18 orders.
 > This is very similar to the previous two queries, however, it focuses on the City rather than the CustomerName
 
+SELECT c.city, count(*)
+FROM orders o JOIN customers c
+ON o.ship_city = c.city
+GROUP BY c.city
+ORDER BY count desc
 
 ## Data Normalization
 
@@ -135,6 +140,8 @@ Take the following data and normalize it into a 3NF database.
 | Sam         | Ginger   | Dog      | Miss Kitty | Cat        | Bubble     | Fish       | Yes         | No           |
 
 ---
+
+
 ## Stretch Goals
 
 ### delete all customers that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.
