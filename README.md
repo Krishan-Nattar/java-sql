@@ -92,7 +92,6 @@ WHERE upper(contact_title) LIKE '%MARKET%'
 INSERT INTO customers(customer_id, company_name, contact_name, address, city, postal_code, country)
 VALUES ('SHIRE', 'The Shire', 'Bilbo Baggins', '1 Hobbit-Hole', 'Bag End', '111', 'Middle Earth')
 
-
 ### update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
 > This can be done with UPDATE and WHERE clauses
 
@@ -182,7 +181,6 @@ FROM customers c
 LEFT JOIN orders o ON o.customer_id = c.customer_id
 WHERE o.customer_id IS NULL
 
-
 ## Create Database and Table
 
 ### Keep track of the code you write and paste at the end of this document
@@ -199,7 +197,6 @@ WHERE o.customer_id IS NULL
   - the `id` should be the primary key for the table.
   - account `name` should be unique.
   - account `budget` is required.
-
 
 CREATE DATABASE budget
 
